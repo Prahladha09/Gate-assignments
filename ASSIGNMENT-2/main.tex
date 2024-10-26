@@ -1,0 +1,250 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}  
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{multicol}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE-2009-PH}
+\author{AI24BTECH11024-Pappuri Prahladha}
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[start=37]
+\item \hspace{1mm}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.50\textwidth}{!}{% % Adjust the scale here
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\Large] % Adjust font size if needed
+
+\draw (5.5,11) to[battery] (5.5,7.75);
+
+\draw (8.25,11) to[R] (8.25,7.75);
+\draw (5.5,11) to[R] (8.25,11);
+\draw (8.25,11) to[R] (11.75,11);
+\draw (11.75,11) to[R] (11.75,7.75);
+\draw (5.5,7.75) to[short] (11.75,7.75);
+
+\node [font=\large] at (10,11.5) {10$\Omega$};
+\node [font=\large] at (7,11.5) {10$\Omega$};
+\node [font=\large] at (4.75,9.25) {15V};
+\node [font=\large] at (12.25,9.25) {$R_{L}$};
+\node [font=\large] at (9,9.25) {10$\Omega$};
+
+\end{circuitikz}
+}
+\end{figure}
+
+Assuming an ideal voltage source. Thevenin's resistance and Thevenin's voltage respectively for the above circuit are 
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $15\ohm$ and 7.5\textbf{V}
+    \item $20\ohm$ and 5\textbf{V}
+    \item $10\ohm$ and 10\textbf{V}
+    \item $30\ohm$ and 15\textbf{V}
+\end{enumerate}
+\end{multicols}
+\item Let $ |n\rangle $ and $ |p\rangle $ denote the isospin states with $ I = \frac{1}{2} $, $ I_3 = \frac{1}{2} $ and $ I = \frac{1}{2} $, $ I_3 = -\frac{1}{2} $ of a nucleon respectively. Which one of the following two-nucleon states has $ I = 0, I_3 = 0 $?
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $ \frac{1}{\sqrt{2}} \left( | nn \rangle - | pp \rangle \right) $
+    \item $ \frac{1}{\sqrt{2}} \left( | nn \rangle + | pp \rangle \right) $
+    \item $ \frac{1}{\sqrt{2}} \left( | np \rangle - | pn \rangle \right) $
+    \item $ \frac{1}{\sqrt{2}} \left( | np \rangle + | pn \rangle \right) $
+\end{enumerate}
+\end{multicols}
+\item An amplifier of gain 1000 is made into a feedback amplifier by feeding $9.9\%$ of its output voltage in series with the input opposing. If $f_{L}=20Hz$ and $f_{H}=200kHz$ for the amplifier without feedback, then due to the feedback
+\begin{enumerate}
+    \item the gain decreases by 10 times
+    \item the output resistance increases by 10 times
+    \item the $f_{H}$ increases by 100 times
+    \item the input resistance decreases by 100 times
+\end{enumerate}
+\item \hspace{1cm}
+
+\begin{figure}[H]
+\centering
+\resizebox{0.50\textwidth}{!}{% % Adjust the scale here
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\Large] % Adjust font size if needed
+
+\node [font=\LARGE] at (10,8) {};
+\node [font=\Large] at (10,7) {};
+\node [font=\large] at (10,8) {\textbf{}};
+
+\draw (3,10) to[battery] (3,3.75);
+\draw (11.5,10) to[R] (11.5,3.75);
+\draw (3,10) to[R] (7.25,10);
+\draw (3,3.75) to[short] (11.5,3.75);
+\draw (7.25,10) to[short] (11.5,10);
+\draw [line width=0.8pt, ->, >=Stealth] (2.5,6.5) -- (3.75,7.25);
+\draw [short] (7.25,5) -- (7,5.25);
+\draw [short] (7.25,5) -- (7.5,5.25);
+\draw [short] (10.75,10) -- (10.5,10.25);
+\draw [short] (10.75,10) -- (10.5,9.75);
+\draw [short] (3.5,10) -- (3.25,10.25);
+\draw [short] (3.5,10) -- (3.25,9.75);
+\draw (7.25,3.75) to[empty Zener diode] (7.25,10);
+
+\node [font=\normalsize] at (2,7.25) {$V_{in}$};
+\node [font=\normalsize] at (2,6.75) {$15-25 V $};
+\node [font=\Large] at (3.25,10.5) {I};
+\node [font=\normalsize] at (5.25,10.5) {$R_s = 1 \, k\Omega$};
+\node [font=\large] at (10.5,10.5) {$I_L$};
+\node [font=\normalsize] at (12.25,7) {$R_L$};
+\node [font=\normalsize] at (8,5.25) {$I_Z $};
+\node [font=\normalsize] at (8.25,6.75) {$V_Z = 10 \, V$};
+
+\end{circuitikz}
+}%
+\end{figure}
+
+
+
+Pick the correct statement based on the above circuit.
+\begin{enumerate}
+    \item The maximum Zener current $I_{Z\brak{max}}$, when $R_{L}=10k\ohm$ is 15mA
+    \item The minimum Zener current $I_{Z\brak{min}}$, when $R_{L}=10k\ohm$ is 5mA
+    \item With $V_{in}=20V$,$I_{L}=I_{Z}$ when $R_{L}=2k\ohm$
+    \item The power dissipated across the Zener when $R_{L}=10k\ohm$ and $V_{in}=20V$ is 100mW
+\end{enumerate}
+\item The disintegration energy is defined to be the difference in the rest energy between the initial and final states.Consider the following process:\\$^{240}_{94}Pu\rightarrow ^{236}_{92}U+^{4}_{2}He$.\\The emitted $\alpha$ particle has a kinetic energy 5.17 MeV.The value of disintegration energy is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 5.26 MeV
+    \item 5.17 MeV
+    \item 5.08 MeV
+    \item 2.59 MeV
+\end{enumerate}
+\end{multicols}
+\item A classical particle is moving in an external potential field $V\brak{x,y,z}$ which is invariant under the following infinitesimal transformations
+\begin{align*}
+x &\rightarrow x^{\prime} = x + \delta x,\\
+y &\rightarrow y^{\prime} = y + \delta y,\\
+\begin{pmatrix} x \\ y \end{pmatrix} &\rightarrow \begin{pmatrix} x^{\prime} \\ y^{\prime} \end{pmatrix}=R_{z}\begin{pmatrix} x \\ y \end{pmatrix},
+\end{align*}
+where $R_z$ is the matrix corresponding to rotation about the z axis. The conserved quantities are (the symbols have their usual meaning)
+\begin{multicols}{4}
+\begin{enumerate}
+\item $P_{x}, P_{z}, L_{z}$
+\item $P_{x}, P_{y}, L_{z}, E$
+\item $P_{y}, L_{z}, E$
+\item $P_{y}, P_{z}, L_{x}, E$
+\end{enumerate} 
+\end{multicols}
+\item The spin function of a free particle, in the basis in which $ S_{z} $ is diagonal, can be written as $ \begin{pmatrix} 1 \\ 0 \end{pmatrix} $ and $ \begin{pmatrix} 0 \\ 1 \end{pmatrix} $ with eigenvalues $ +\frac{\hbar}{2} $ and $ -\frac{\hbar}{2} $, respectively. In the given basis, the normalized eigenfunction of $ S_{y} $ with eigenvalue $ -\frac{\hbar}{2} $ is:
+\begin{multicols}{4}
+\begin{enumerate}
+\item $  \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ i \end{pmatrix}$ 
+\item $  \frac{1}{\sqrt{2}}\begin{pmatrix} 0 \\ i \end{pmatrix}$ 
+\item $  \frac{1}{\sqrt{2}}\begin{pmatrix} i \\ 0 \end{pmatrix} $
+\item $  \frac{1}{\sqrt{2}}\begin{pmatrix} i \\ 1 \end{pmatrix}$
+\end{enumerate}
+\end{multicols}
+
+\item  Let $ \hat{A} $ and $ \hat{B} $ represent two physical characteristics of a quantum system. If $ \hat{A} $ is Hermitian, then for the product $\hat{A}\hat{B} $ to be Hermitian, it is sufficient that:
+\begin{enumerate}
+\item   $\hat{B}$ is Hermitian
+\item   $\hat{B}$ is anti-Hermitian
+\item   $\hat{B}$  Hermitian and  $\hat{A}$ and  $\hat{B}$  commute
+\item   $\hat{B}$  is Hermitian and  $\hat{A}$  and $\hat{B}$ anti-commute
+\end{enumerate}
+\item Consider the set of vectors in three-dimensional real vector space\\
+$\mathbb{R}^{3},S=\cbrak{\brak{1,1,1},\brak{1,-1,1},\brak{1,1,-1}}$. Which one of the following statements is true?
+\begin{enumerate}
+    \item $S$ is not a linearly independent set.
+    \item $S$ is a basis for $\mathbb{R}^{3}$.
+    \item The vectors in $S$ are orthogonal.
+    \item An orthogonal set of vectors cannot be generated from $S$.
+\end{enumerate}
+\item For a Fermi gas of $N$ particles in three dimensions at $T=0k$,the Fermi energy,$E_{F}$ is proportional to
+\begin{enumerate}
+    \item $N_{\frac{2}{3}}$
+    \item $N_{\frac{3}{2}}$
+    \item $N_{3}$
+    \item $N_{3}$
+\end{enumerate}
+\item  The Lagrangian of a diatomic molecule is given by $L = \frac{m}{2}\brak{\dot{x_1}^{2} + \dot{x_2}^{2}} - \frac{k}{2}x_{1}x_{2},$
+where $m$ is the mass of each of the atoms and $x_{1}$ and $x_{2}$ are the displacements of the atoms measured from the equilibrium position, and $k > 0$. The normal frequencies are 
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\pm \left(\frac{k}{m}\right)^{1/2}$ 
+\item $\pm \left(\frac{k}{m}\right)^{1/4}$ 
+\item $\pm \left(\frac{k}{2m}\right)^{1/4}$ 
+\item $\pm \left(\frac{k}{2m}\right)^{1/2}$
+\end{enumerate}
+\end{multicols}
+
+\item  A particle is in the normalized state $|\psi\rangle$, which is a superposition of the energy eigenstates $|E_{0} = 10eV\rangle$ and $|E_{1} = 30eV\rangle$. The average value of energy of the particle in the state $|\psi\rangle$is 20 eV. The state $|\psi\rangle$ is given by 
+\begin{multicols}{2}  
+\begin{enumerate}
+\item $\frac{1}{2} |E_{0} = 10eV\rangle + \frac{\sqrt{3}}{4} |E_{1} = 30eV\rangle $
+\item $\frac{1}{\sqrt{3}}|E_{0} = 10eV\rangle + \frac{\sqrt{2}}{3} |E_{1} = 30eV\rangle$ 
+\item $\frac{1}{2} |E_{0} = 10 eV\rangle - \frac{\sqrt{3}}{4}|E_{1} = 30 eV\rangle$ 
+\item $\frac{1}{\sqrt{2}}|E_{0} = 10eV\rangle - \frac{1}{\sqrt{2}} |E_{1} = 30eV\rangle$
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+
+\end{document}
