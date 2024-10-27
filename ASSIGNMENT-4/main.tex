@@ -1,0 +1,176 @@
+
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}  
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{multicol}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{GATE-2011-AE}
+\author{AI24BTECH11024-Pappuri Prahladha}
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+\item  The possible set of eigenvalues of a $ 4 \times 4 $ skew-symmetric orthogonal real matrix is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\cbrak{\pm i}$ 
+    \item $\cbrak{\pm i,\pm 1}$
+    \item $\cbrak{\pm 1}$
+    \item $\cbrak{0,\pm i}$
+\end{enumerate}
+\end{multicols}
+\item The coefficient of $ \brak{z - \pi}^{2}$ in the Taylor series expansion of
+$
+f(z) = \begin{cases} \frac{\sin z}{z - \pi} & if  z \neq \pi \\ -1 & if  z = \pi \end{cases}
+$
+around $\pi$ is
+\begin{multicols}{4}
+\begin{enumerate}
+    \item $\frac{1}{2}$ 
+    \item $ -\frac{1}{2} $
+    \item $ \frac{1}{6}$ 
+    \item $ -\frac{1}{6}$ 
+\end{enumerate}
+\end{multicols}
+% \item  Consider $ \mathbb{R}^{2} $ with the usual topology. Which of the following statements are TRUE for all $ A, B \subseteq \mathbb{R}^{2}$?
+% \begin{itemize}
+%     \item \( A \cup B = \overline{A} \cup \overline{B} \).
+%     \item \( A \cap B = \overline{A} \cap \overline{B} \).
+%     \item \( (A \cup B)^o = A^o \cup B^o \).
+%     \item \( (A \cap B)^o = A^o \cap B^o \).
+% \end{itemize}
+\item  Consider $ \mathbb{R}^{2} $ with the usual topology. Which of the following statements are TRUE for all $ A, B \subseteq \mathbb{R}^{2}$?
+\begin{itemize}
+    \item[P:]$ A \cup B = \overline{A} \cup \overline{B} $.
+    \item[Q:]$ A \cap B = \overline{A} \cap \overline{B} $.
+    \item[R:]$ (A \cup B)^o = A^o \cup B^o $.
+    \item[S:]$ (A \cap B)^o = A^o \cap B^o $.
+\end{itemize}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item P and R only
+    \item P and S only
+    \item Q and R only
+    \item Q and S only
+\end{enumerate}
+\end{multicols}
+\item Let $ f : \mathbb{R} \to \mathbb{R} $ be a continuous function with $ f{\brak1} = 5 $ and $ f\brak{3} = 11 $. If $ g\brak{x} = \int_1^3 f\brak{x + t} \, dt $ then $ g^{\prime}\brak{0} $ is equal to \underline{\hspace{2cm}}.
+\\
+\item  Let  $P$  be a $ 2 \times 2 $ complex matrix such that $ trace\brak{P} = 1 $ and $ \det(P) = -6 $. Then, $ trace\brak{P^{4} - P^{3}} $ is \underline{\hspace{2cm}}.
+\\
+\item  Suppose that  $R$  is a unique factorization domain and that $ a, b \in R $ are distinct irreducible elements. Which of the following statements is \textbf{TRUE}?
+\begin{enumerate}
+    \item The ideal \( \langle 1 + a \rangle \) is a prime ideal.
+    \item The ideal \( \langle a + b \rangle \) is a prime ideal.
+    \item The ideal \( \langle 1 + ab \rangle \) is a prime ideal.
+    \item The ideal \( \langle a \rangle \) is not necessarily a maximal ideal.
+\end{enumerate}
+
+\item  Let  $X$  be a compact Hausdorff topological space and let  $Y$  be a topological space. Let $ f : X \to Y $ be a bijective continuous mapping. Which of the following is \textbf{TRUE}?
+\begin{enumerate}
+    \item $f$ is a closed map but not necessarily an open map.
+    \item $f$ is an open map but not necessarily a closed map.
+    \item $f$ is both an open map and a closed map.
+    \item $f$ need not be an open map or a closed map.
+\end{enumerate}
+
+\item Consider the linear programming problem:
+\[
+Maximize  x + \frac{3}{2} y
+\]
+\[
+ subject\,\,to\,\,2x + 3y \leq 16,
+\]
+\[
+x + 4y \leq 18,
+\]
+\[
+x \geq 0, \; y \geq 0.
+\]
+If $S$ denotes the set of all solutions of the above problem, then
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $S$ is empty.
+    \item $S$ is a singleton.
+    \item $S$ is a line segment.
+    \item $S$ has positive area.
+\end{enumerate}
+\end{multicols}
+\item Which of the following groups has a proper subgroup that is \textbf{NOT} cyclic?
+\begin{enumerate}
+    \item  $ \mathbb{Z}_{15} \times \mathbb{Z}_{77} $
+    \item  $ S_3 $
+    \item  $ \brak{\mathbb{Z}, +} $
+    \item  $ \brak{\mathbb{Q}, +} $
+\end{enumerate}
+
+\item The value of the integral
+\[
+\int_0^{\infty} \int_x^{\infty}  \brak{\frac{1}{y}} e^{-y/2} \, dy \, dx
+\]
+is \underline{\hspace{2cm}}.
+\\
+\item Suppose the random variable $U$ has uniform distribution on $\sbrak{0,1}$ and $ X = -2 \log U $. The density of $X$ is
+\begin{enumerate}
+    \item $ f\brak{x} = \begin{cases} e^{-x} & if\, x > 0 \\ 0 & otherwise \end{cases} $
+    \item $ f\brak{x} = \begin{cases} 2e^{-2x} & if/, x > 0 \\ 0 & otherwise \end{cases} $
+    \item $ f\brak{x} = \begin{cases} \frac{1}{2} e^{-x/2} & if\,  x > 0 \\ 0 & otherwise \end{cases} $
+    \item $ f\brak{x} = \begin{cases} \frac{1}{2} & if\, x \in [0, 2] \\ 0 & otherwise \end{cases}\\ $
+\end{enumerate}
+\item  Let  $f$  be an entire function on $ \mathbb{C} $ such that $ |f(z)| \leq 100 \log |z| $ for each $ z $ with $ |z| \geq 2 $. If $ f(i) = 2i $, then $ f(1) $
+\begin{enumerate}
+    \item must be $2$ 
+    \item must be $2i$
+    \item must be $i$ 
+    \item cannot be determined from the given data
+\end{enumerate}
+\item The number of group homomorphisms from $ \mathbb{Z}_{3} $ to $ \mathbb{Z}_{9} $ is \underline{\hspace{2cm}}.
+\end{enumerate}
+\end{document}
